@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} Archive {% endblock %}
+{% block title %}{{ SITENAME }} Arquivos {% endblock %}
 
 {% block stylesheets %}
     {{ super() }}
@@ -15,7 +15,7 @@
 
     <div id="post-container">
         <header>
-            <h1>Blog Archive</h1>
+            <h1>Arquivos</h1>
         </header>
 
 
@@ -32,7 +32,6 @@
                                         </time>
                                         <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"><h1>{{ article.title }}</h1></a>
                                     </header>
-                                    <!-- <h1><a href="{{ article.url }}">{{ article.title }}</a></h1> -->
                                     <footer>
                                         {% if article.tags %}
                                             <p>
