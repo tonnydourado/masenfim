@@ -20,8 +20,10 @@
             <li>
                 <article class="post-entry">
                     <header class="entry-header">
+                        <h3></h3>
                         <time class="post-time" datetime="{{ article.date.isoformat() }}" pubdate>
-                            {{ article.locale_date }}
+                            {{ article.locale_date }} <br>
+                            by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
                         </time>
                         <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"><h1>{{ article.title }}</h1></a>
                     </header>
@@ -31,12 +33,23 @@
                     </section>
                     <hr/>
                     <aside class="post-meta">
-                        <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+                        {% if article.category != 'misc' %}
+                            <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+                        {% endif %}
                         {% if article.tags %}
-                        <p>Tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>, {% endfor %}</p>
+                            <p>
+                                <a href="{{ SITEURL }}/{{ article.tags[0].url }}">{{ article.tags[0] }}</a>
+                                {% for tag in article.tags[1:] %}
+                                    , <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                                {% endfor %}
+                            </p>
                         {% endif %}
                     </aside>
                     <hr/>
+                    {% if TWITTER_USERNAME %}
+                        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{TWITTER_USERNAME}}">Tweet</a>
+                        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                    {% endif %}
                     {% include "disqus.html" %}
                 </article>
             </li>

@@ -17,8 +17,9 @@ body{
     min-width: 200px;
     padding-left: 8px;
     padding-right: 8px;
+    min-height: 400px;
     color: $white;
-    a{
+    a {
         color: $white;
         text-decoration: none;
     }
@@ -51,16 +52,14 @@ body{
     list-style: none;
     padding: 0;
     font-family: $font2;
-    font-size: 2em;
+    font-size: 1em;
     font-variant: bold;
     li{
         margin: 12px 12px;
+        text-align: center;
     }
     a{
-        padding: 0 24px;
-        border-radius: 24px;
         display: inline-block;
-        border: 3px solid $white;
         line-height: 1.8em;
         @include transition;
     }
@@ -70,7 +69,6 @@ body{
     }
 
 }
-
 
 #post-list{
     list-style: none;
@@ -143,11 +141,44 @@ body{
     }
 }
 
+.tagcloud {
+    padding: 0px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 25% 0px;
+}
+
+/* display the individual items next to each other, not one-per-line */
+.tagcloud li {
+    display: inline;
+    padding: 5px;
+}
+
+.tagcloud li:hover {
+    font-weight: bold;
+    background-color: $accent1;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* size is purely presentational, based upon the class */
+.tagcloud .tag-1 { font-size: 1.2em; }
+.tagcloud .tag-2 { font-size: 1.5em; }
+.tagcloud .tag-3 { font-size: 1.7em; }
+.tagcloud .tag-4 { font-size: 2.1em; }
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media only screen and (max-height: 500px) {
+    .tagcloud {
+        padding: 0px;
+    }
+}
 
 @media only screen and (max-width: 800px) {
     /* Style adjustments for viewports that meet the condition */
@@ -155,6 +186,7 @@ body{
         position: static;
         width: 100%;
         padding: 0;
+        min-height: 0px;
     }
 
    #post-container{
@@ -201,6 +233,10 @@ body{
 
     #site-info{
         position: relative;
+    }
+
+    .tagcloud {
+        padding: 0px;
     }
 }
 

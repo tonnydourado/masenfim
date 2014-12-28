@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} Archive {% endblock %}
+
+{% block stylesheets %}
+    {{ super() }}
+    {% assets filters="scss", output="css/blog.css", "css/sass/blog.scss" %}
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/github.css">
+{% endblock stylesheets %}
+
+{% block content %}
+    {% include "sidebar.html" %}
+
+    <div id="post-container">
+        <header>
+            <h1>Blog Archive</h1>
+        </header>
+
+
+            {% for year, date_year in dates|groupby('date.year')|sort(reverse=NEWEST_FIRST_ARCHIVES) %}
+                <h2>{{ year }}</h2>
+                <ol id="post-list">
+                    {% for month, articles in date_year|groupby('date.month') %}
+                        {% for article in articles %}
+                            <li>
+                                <article class="post-entry">
+                                    <header class="entry-header">
+                                        <time class="post-time" datetime="{{ article.date.isoformat() }}" pubdate>
+                                            {{ article.locale_date }}
+                                        </time>
+                                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"><h1>{{ article.title }}</h1></a>
+                                    </header>
+                                    <!-- <h1><a href="{{ article.url }}">{{ article.title }}</a></h1> -->
+                                    <footer>
+                                        {% if article.tags %}
+                                            <p>
+                                                <a href="{{ SITEURL }}/{{ article.tags[0].url }}">{{ article.tags[0] }}</a>
+                                                {% for tag in article.tags[1:] %}
+                                                    , <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                                                {% endfor %}
+                                            </p>
+                                        {% endif %}
+                                    </footer>
+                                </article>
+                            </li>
+                        {% endfor %}
+                    {% endfor %}
+                </ol>
+            {% endfor %}
+    </div>
+
+{% endblock %}
