@@ -14,11 +14,6 @@
                 <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
             {% endfor %}
         </ul>
-        <ul class="tagcloud">
-            {% for tag in tag_cloud %}
-                <li class="tag-{{ tag.1 }}"><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></li>
-            {% endfor %}
-        </ul>
     </nav>
     {% include "footer.html" %}
 </header>

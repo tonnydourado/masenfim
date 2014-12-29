@@ -149,7 +149,6 @@ body {
     width: 70%;
     margin: auto;
     text-align: center;
-    padding: 25% 0px;
 }
 
 /* display the individual items next to each other, not one-per-line */
@@ -165,6 +164,10 @@ body {
     padding: 5px;
 }
 
+.tagcloud li:hover a {
+    color: $white;
+}
+
 /* size is purely presentational, based upon the class */
 .tagcloud .tag-1 { font-size: 1.2em; }
 .tagcloud .tag-2 { font-size: 1.5em; }
@@ -176,12 +179,6 @@ body {
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media only screen and (max-height: 500px) {
-    .tagcloud {
-        padding: 0px;
-    }
-}
 
 @media only screen and (max-width: 800px) {
     /* Style adjustments for viewports that meet the condition */

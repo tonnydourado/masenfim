@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - tags {% endblock %}
+
+{% block stylesheets %}
+    {{ super() }}
+    {% assets filters="scss", output="css/blog.css", "css/sass/blog.scss" %}
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/github.css">
+{% endblock stylesheets %}
+
+{% block content %}
+    {% include "sidebar.html" %}
+
+    <div id="post-container">
+        <article class="post-entry">
+            <header class="entry-header">
+                <h1>Tags</h1>
+            </header>
+            <footer class='post-content'>
+                <ul class="tagcloud">
+                    {% for tag in tag_cloud %}
+                        <li class="tag-{{ tag.1 }}"><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></li>
+                    {% endfor %}
+                </ul>
+            </footer>
+        </article>
+    </div>
+
+{% endblock %}

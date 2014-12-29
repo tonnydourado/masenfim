@@ -20,7 +20,7 @@ DELETE_OUTPUT_DIRECTORY = True
 AUTORELOAD_IGNORE_CACHE = True
 
 USE_CUSTOM_MENU = True
-CUSTOM_MENUITEMS = (('Arquivos', 'archives.html'),)
+CUSTOM_MENUITEMS = (('Tags', 'tags.html'), ('Arquivos', 'archives.html'),)
 
 TAG_CLOUD_STEPS = 4
 TAG_CLOUD_MAX_ITEMS = 1000
