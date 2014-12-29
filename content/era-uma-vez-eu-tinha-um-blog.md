@@ -1,5 +1,5 @@
 Title: Era uma vez eu tinha um blog
-Date: 2014-12-29 02:35
+Date: 2014-12-29
 Author: Colombiano
 Tags: previously, first, blablabla
 Slug: era-uma-vez-eu-tinha-um-blog
