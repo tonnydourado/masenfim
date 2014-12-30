@@ -13,6 +13,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 # DROPBOX_DIR=~/Dropbox/Public/
 
 GITHUB_PAGES_BRANCH=gh-pages
+GITHUB_PAGES_BRANCH_REMOTE=origin
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -76,6 +77,6 @@ publish:
 
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-	git push origin $(GITHUB_PAGES_BRANCH)
+	git push $(GITHUB_PAGES_BRANCH_REMOTE) $(GITHUB_PAGES_BRANCH)
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
