@@ -12,7 +12,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 # DROPBOX_DIR=~/Dropbox/Public/
 
-GITHUB_PAGES_BRANCH=gh-pages
+GITHUB_PAGES_BRANCH=master
 GITHUB_PAGES_BRANCH_REMOTE=origin
 
 DEBUG ?= 0
