@@ -7,9 +7,6 @@ TWITTER_USERNAME = 'tonnydourado'
 SITENAME = u'Mas, Enfim.'
 SITEURL = '/'
 
-DISQUS_SITENAME = 'masenfim'
-# GOOGLE_ANALYTICS
-
 PATH = 'content'
 
 TIMEZONE = 'America/Sao_Paulo'

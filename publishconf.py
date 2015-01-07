@@ -10,6 +10,9 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
+DISQUS_SITENAME = 'masenfim'
+# GOOGLE_ANALYTICS
+
 SITEURL = 'tonnydourado.github.io/masenfim'
 RELATIVE_URLS = True
 
