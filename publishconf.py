@@ -14,7 +14,7 @@ DISQUS_SITENAME = 'masenfim'
 GOOGLE_ANALYTICS = 'UA-58308556-1'
 
 SITEURL = 'tonnydourado.github.io/masenfim'
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 
 STATIC_PATHS = ['extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
