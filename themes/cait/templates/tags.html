@@ -4,7 +4,7 @@
 
 {% block stylesheets %}
     {{ super() }}
-    {% assets filters="scss", output="css/blog.css", "css/sass/blog.scss" %}
+    {% assets filters="scss,cssmin", output="css/blog.css", "css/sass/blog.scss" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/github.css">

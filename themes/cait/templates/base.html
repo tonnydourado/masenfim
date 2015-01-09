@@ -43,7 +43,7 @@
             <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
             <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
             <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
-            {% assets filters="scss", output="css/main.css", "css/sass/main.scss" %}
+            {% assets filters="scss,cssmin", output="css/main.css", "css/sass/main.scss" %}
                 <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
             {% endassets %}
         {% endblock stylesheets %}
