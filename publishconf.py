@@ -20,6 +20,8 @@ STATIC_PATHS = ['extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
-# CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
+
+# Do not process drafts when generating the site for publication:
+ARTICLE_EXCLUDES = ["drafts"]
