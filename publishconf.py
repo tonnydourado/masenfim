@@ -16,8 +16,12 @@ GOOGLE_ANALYTICS = 'UA-58308556-1'
 SITEURL = 'masenf.im'
 RELATIVE_URLS = True
 
-STATIC_PATHS = ['extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
+STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico']
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+
+}
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 
