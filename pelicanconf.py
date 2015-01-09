@@ -30,9 +30,7 @@ PLUGINS = ['assets']
 # Assets and themes
 WEBASSETS = True
 THEME = './themes/cait'
-ASSET_SOURCE_PATHS = (
-    'static',
-)
+ASSET_SOURCE_PATHS = ['static']
 ASSETS_RELATIVE = True
 
 # Feed generation is usually not desired when developing
