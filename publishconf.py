@@ -13,13 +13,13 @@ from pelicanconf import *
 DISQUS_SITENAME = 'masenfim'
 GOOGLE_ANALYTICS = 'UA-58308556-1'
 
-SITEURL = 'tonnydourado.github.io/masenfim'
-RELATIVE_URLS = False
+SITEURL = 'masenf.im'
+RELATIVE_URLS = True
 
 STATIC_PATHS = ['extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
 
-FEED_ALL_ATOM = 'http://feeds.feedburner.com/masenfeed'
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
 # CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
