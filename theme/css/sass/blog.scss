@@ -1,0 +1,257 @@
+@import "vars.scss";
+
+body {
+    color: $black;
+    background-color: $white;
+    font-family: $font1;
+}
+
+#sidebar {
+    background: url('../img/stressed_linen/stressed_linen.png') repeat;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: 0;
+    width: 22%;
+    min-width: 200px;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-height: 450px;
+    color: $white;
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+#site-title {
+    font-family: $font2;
+    font-size: 1.5em;
+    text-align: center;
+    @include transition;
+
+    &:hover {
+        color: $accent1;
+    }
+}
+
+#site-desc {
+    font-size: 1.3em;
+    padding: 0 6px;
+}
+
+#post-container {
+    position: relative;
+    margin-left: 27%;
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
+
+#nav-links {
+    list-style: none;
+    padding: 0;
+    font-family: $font2;
+    font-size: 1em;
+    font-variant: bold;
+    li {
+        margin: 12px 12px;
+        text-align: center;
+    }
+    a {
+        display: inline-block;
+        line-height: 1.8em;
+        @include transition;
+    }
+    a:hover {
+        border-color: $accent1;
+        color: $accent1;
+    }
+
+}
+
+#post-list {
+    list-style: none;
+}
+
+.post-entry {
+    margin: 3em 0;
+}
+
+.entry-header {
+    font-family: $font2;
+    font-variant: bold;
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $accent1;
+        text-decoration: none;
+    }
+    time {
+        color: $gray;
+    }
+    h1 {
+        margin: 0.5em 0;
+    }
+}
+
+
+.post-content {
+    p {
+        text-align: justify;
+    }
+    a {
+        color: $accent1;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+    blockquote {
+        font-style: italic;
+    }
+    pre {
+        font-size: 13px;
+        background-color: $prebg;
+        padding: 10px;
+        margin: 10px;
+        overflow: auto;
+        font-family: $font3;
+    }
+}
+
+.post-meta {
+    a {
+        font-style: italic;
+        color: $accent1;
+    }
+}
+
+.paginator {
+    text-align: center;
+    padding: 12px;
+    font-size: 1.4em;
+    font-family: $font2;
+    a {
+        color: $black;
+        text-decoration: none;
+        &:hover{
+            color: $accent1;
+        }
+    }
+}
+
+.tagcloud {
+    padding: 0px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+/* display the individual items next to each other, not one-per-line */
+.tagcloud li {
+    display: inline;
+    padding: 5px;
+}
+
+.tagcloud li:hover {
+    font-weight: bold;
+    background-color: $accent1;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.tagcloud li:hover a {
+    color: $white;
+}
+
+/* size is purely presentational, based upon the class */
+.tagcloud .tag-1 { font-size: 1.2em; }
+.tagcloud .tag-2 { font-size: 1.5em; }
+.tagcloud .tag-3 { font-size: 1.7em; }
+.tagcloud .tag-4 { font-size: 2.1em; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+    #sidebar {
+        position: static;
+        width: 100%;
+        padding: 0;
+        min-height: 0px;
+    }
+
+   #post-container {
+        width: 100%;
+        position: static;
+        margin: 0;
+        padding: 0px;
+    }
+
+    #post-list {
+        padding: 0;
+    }
+
+    #nav-links {
+        text-align: center;
+        padding: 0;
+        font-size: 1.8em;
+        li {
+            display: inline;
+            margin-top: 6px;
+        }
+        a {
+            display: inline-block;
+        }
+    }
+
+    #site-title h1 {
+        margin-top: 0;
+    }
+
+    #site-header {
+        margin-left: 18px;
+    }
+
+    .side-shadow {
+        -webkit-box-shadow: 0 3px 12px 3px $gray;
+           -moz-box-shadow: 0 3px 12px 3px $gray;
+                box-shadow: 0 3px 12px 3px $gray;
+    }
+
+    .post-entry {
+        padding: 0 12px;
+    }
+
+    #site-info {
+        position: relative;
+    }
+
+    .tagcloud {
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #nav-links {
+        font-size: 1.1em;
+    }
+    #site-desc {
+        font-size: 1em;
+    }
+    #site-title h1 {
+        font-size: 1.3em;
+        margin: 0.1em 0px;
+    }
+    #site-info {
+        font-size: 0.6em;
+    }
+}
