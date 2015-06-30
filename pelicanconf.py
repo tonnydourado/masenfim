@@ -34,6 +34,13 @@ PLUGINS = ['assets']
 # Assets and themes
 WEBASSETS = True
 THEME = './themes/cait'
+# THEME = './themes/svbtle'
+# THEME = './themes/pelican-sober'
+# THEME = './themes/pelican-simplegrey'
+# THEME = './themes/pelican-mockingbird'  # Interesting
+# THEME = './themes/chunk'  # Also interesting
+# THEME = './themes/iris'   # de repente dá pra arrumar ...
+THEME = './themes/storm'  # promete tb
 ASSET_SOURCE_PATHS = ['static']
 ASSETS_RELATIVE = True
 
