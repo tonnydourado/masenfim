@@ -26,14 +26,12 @@ DISPLAY_CATEGORIES_ON_MENU = False
 TAG_CLOUD_STEPS = 4
 TAG_CLOUD_MAX_ITEMS = 1000
 
-THEME = 'themes/cait'
-
 PLUGIN_PATHS = ['plugins/pelican-plugins']
 PLUGINS = ['assets']
 
 # Assets and themes
 WEBASSETS = True
-THEME = './themes/cait'
+# THEME = './themes/cait'
 # THEME = './themes/svbtle'
 # THEME = './themes/pelican-sober'
 # THEME = './themes/pelican-simplegrey'
